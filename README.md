@@ -19,7 +19,7 @@ The DAD Python library is the perfect companion to quickly bootstrap address dat
 
 ```bash
 # Install tool
-pip3 install dad_python
+pip3 install dad_tool
 
 # Install locally
 make install
