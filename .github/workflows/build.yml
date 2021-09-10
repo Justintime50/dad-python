@@ -29,7 +29,9 @@ jobs:
         with:
           python-version: ${{ matrix.pythonversion }}
       - name: Install Dependencies
-        run: make install
+        run: |
+          make install
+          git submodule init && git submodule update
       - name: Run tests
         run: make coverage
       - name: Coveralls
