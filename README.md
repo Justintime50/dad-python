@@ -1,6 +1,6 @@
 <div align="center">
 
-# Dummy Address Data (DAD) Node Library
+# Dummy Address Data (DAD) Python Library
 
 Dummy Address Data (DAD) - Retrieve real addresses from all around the world. (Python Client Library)
 
