@@ -1,5 +1,4 @@
 import json
-import os
 import random
 
 
@@ -21,7 +20,7 @@ def list_iso_country_codes():
 
 
 def _open_json_file(data):
-    address_file = os.path.join(os.getcwd(), _variables(data))
+    address_file = _variables(data)
     with open(address_file, 'r') as json_file:
         address_json = json.load(json_file)
 
