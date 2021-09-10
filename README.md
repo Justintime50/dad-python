@@ -28,7 +28,6 @@ make install
 make help
 ```
 
-
 ## Address Data
 
 Address objects will look like the [sample below](#sample-address-object). The data type of each field on an address object is a `string`. A list of addresses is an `array` of `json` objects.
@@ -87,8 +86,6 @@ The following files can be found in the `data` directory.
 
 
 ## Usage
-
-Usage instructions go here.
 
 ```python
 import dad_tool
