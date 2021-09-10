@@ -6,8 +6,8 @@ help:
 
 ## venv - Install the virtual environment
 venv:
-	$(VIRTUALENV) ~/.venv/project_name/
-	ln -snf ~/.venv/project_name/ venv
+	$(VIRTUALENV) ~/.venv/dad_python/
+	ln -snf ~/.venv/dad_python/ venv
 	venv/bin/pip install -e ."[dev]"
 
 ## install - Install the project locally
@@ -15,7 +15,7 @@ install: | venv
 
 ## clean - Remove the virtual environment and clear out .pyc files
 clean:
-	rm -rf ~/.venv/project_name/ venv
+	rm -rf ~/.venv/dad_python/ venv
 	find . -name '*.pyc' -delete
 	rm -rf dist
 	rm -rf build
@@ -23,7 +23,7 @@ clean:
 
 ## lint - Lint the project
 lint:
-	venv/bin/flake8 project_name/*.py
+	venv/bin/flake8 dad_python/*.py
 	venv/bin/flake8 test/unit/*.py
 
 ## test - Test the project
@@ -32,6 +32,6 @@ test:
 
 ## coverage - Test the project and generate an HTML coverage report
 coverage:
-	venv/bin/pytest --cov=project_name --cov-branch --cov-report=html --cov-report=term-missing
+	venv/bin/pytest --cov=dad_python --cov-branch --cov-report=html --cov-report=term-missing
 
 .PHONY: help install clean lint test coverage

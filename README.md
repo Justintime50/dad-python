@@ -1,52 +1,145 @@
 <div align="center">
 
-# Python Template
+# Project Name
 
-A Python project template to save you time and energy.
+Dummy Address Data (DAD) - Retrieve real addresses from all around the world. (Python Client Library)
 
-[![Build Status](https://github.com/Justintime50/python-template/workflows/build/badge.svg)](https://github.com/Justintime50/python-template/actions)
-[![Coverage Status](https://coveralls.io/repos/github/Justintime50/python-template/badge.svg?branch=main)](https://coveralls.io/github/Justintime50/python-template?branch=main)
-[![Licence](https://img.shields.io/github/license/justintime50/python-template)](LICENSE)
+[![Build Status](https://github.com/Justintime50/dad-python/workflows/build/badge.svg)](https://github.com/Justintime50/dad-python/actions)
+[![Coverage Status](https://coveralls.io/repos/github/Justintime50/dad-python/badge.svg?branch=main)](https://coveralls.io/github/Justintime50/dad-python?branch=main)
+[![PyPi](https://img.shields.io/pypi/v/dad-python)](https://pypi.org/project/dad-python)
+[![Licence](https://img.shields.io/github/license/Justintime50/dad-python)](LICENSE)
 
-<img src="assets/showcase.png" alt="Showcase">
+<img src="https://raw.githubusercontent.com/justintime50/assets/main/src/dad/showcase.png" alt="Showcase">
 
 </div>
 
-Python projects take a long time to setup with all the various files, the virtual environment, and keeping things uniform across projects. With this Python template, you can quickly setup boilerplate code and miscellaneous items for your Python project saving you time and energy so you can get back to coding. 
+The DAD Python library is the perfect companion to quickly bootstrap address data in your application. DAD provides real addresses from all over the world with a consistent data structure so you can spend less time looking up addresses and address rules and more time coding.
 
 ## Install
 
-Click the `Use this template` button at the top of this project's GitHub page, it looks like this:
+```bash
+# Install tool
+pip3 install dad_python
 
-<img src="assets/use_template_button.png" alt="Use Template Button">
+# Install locally
+make install
+
+# Get Makefile help
+make help
+```
+
+
+## Address Data
+
+Address objects will look like the [sample below](#sample-address-object). The data type of each field on an address object is a `string`. A list of addresses is an `array` of `json` objects.
+
+Attempts have been made to verify addresses and ensure that street1, city, state, and zip are present on all records. Some lists may be shorter than others to avoid complexity or because of a lack of accurate data.
+
+The following files can be found in the `data` directory.
+
+## Australia
+
+| Locations       | Tag   |
+| --------------- | ----- |
+| Victoria Area   | AU_VT |
+
+## Canada
+
+| Locations       | Tag   |
+| --------------- | ----- |
+| BC Area         | CA_BC |
+
+## China
+
+| Locations                 | Tag   |
+| ------------------------- | ----- |
+| Beijing Area              | CN_BJ |
+| Hong Kong - Wan Chai Area | CN_HK |
+
+## Europe
+
+| Locations                     | Tag   |
+| ----------------------------- | ----- |
+| Germany - Wesel Area          | EU_DE |
+| Spain - Countrywide           | EU_ES |
+| United Kingdom - England Area | EU_UK |
+
+## Mexico
+
+| Locations                     | Tag   |
+| ----------------------------- | ----- |
+| Mexico - Mexico City Area     | MX_MX |
+
+## United States
+
+| Locations                 | Tag   |
+| ------------------------- | ----- |
+| Arizona - Gilbert Area    | US_AZ |
+| California - Anaheim Area | US_CA |
+| Idaho - Boise Area        | US_ID |
+| Kansas - Barton County    | US_KS |
+| Nevada - Lincoln Area     | US_NV |
+| New York - Rochester Area | US_NY |
+| Oregon - Portland Area    | US_OR |
+| Texas - Austin Area       | US_TX |
+| Utah - Provo Area         | US_UT |
+| Washington - Spokane Area | US_WA |
+
 
 ## Usage
 
-**Easy text replacements**
+Usage instructions go here.
 
-1. Replace all instances of `project_name` with the name of your project
-    * These are the Python snake_case references (eg: `project_name`)
-1. Replace all instances of `PROJECT_NAME_URL` with the name of your project
-    * These are the references to your project that will appear in URLs and are typically hyphenated (eg: `project-name`)
-1. Replace all instances of `USERNAME` with the name of the author or owner of the project
-    * These are references typically found in the URL of your project as it appears on GitHub
+```python
+import dad_tool
 
-**File configuration**
+# Grab a random UT address
+address = dad_tool.random_address('US_UT')
+print(address)
 
-1. Configure the `setup.py` file
-1. Configure the `Makefile` targets
-1. Update the name in the `LICENSE` or swap it out entirely
-1. Configure the `.github/workflows/build.yml` file
-1. Change the data in `.github/FUNDING.yml`
-1. Update the `CHANGELOG.md` with your own info
-1. Replace the showcase image in `/assets` and remove all other unused assets
-1. Rename other files/folders as needed and configure their content
-1. Delete this `README` and rename `README_project.md` to `README.md`
+# Alternatively, grab the entire UT list
+addresses = dad_tool.list_addresses('US_UT')
+print(addresses)
 
-**GitHub configuration**
+# Get the list of all ISO country codes
+iso_data = dad_tool.list_iso_country_codes()
+print(iso_data)
+```
 
-1. Add a `PYPI_API_TOKEN` GitHub secret to your project so that automated releasing can occur from GitHub Actions to PyPI and uncomment the final step on the `release` job in `.github/workflows/release.yml`
+### Sample Address Object
 
-## Attribution
+A sample address object will look like the following:
 
-* Watch [the video](https://youtu.be/ZMfcl3CnRhA) where I built this template.
+```json
+{
+    "street1": "231 N 1200 W",
+    "street2": "UNIT 104",
+    "city": "OREM",
+    "state": "UT",
+    "zip": "84057",
+    "country": "US"
+}
+```
+
+### Sample ISO Country Object
+
+```json
+{
+    "country": "United States of America",
+    "alpha_2_code": "US",
+    "alpha_3_code": "USA"
+}
+```
+
+## Development
+
+```bash
+# Lint the project
+make lint
+
+# Run tests
+make test
+
+# Run test coverage
+make coverage
+```
