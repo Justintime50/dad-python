@@ -1,4 +1,5 @@
 import json
+import os
 import random
 
 
@@ -20,7 +21,8 @@ def list_iso_country_codes():
 
 
 def _open_json_file(data):
-    address_file = _variables(data)
+    # Setup the path properly so that `DAD` can be referenced from a package context
+    address_file = os.path.join(os.getcwd(), 'dad_tool', _variables(data))
     with open(address_file, 'r') as json_file:
         address_json = json.load(json_file)
 
