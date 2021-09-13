@@ -1,5 +1,5 @@
 # CHANGELOG
 
-## v0.1.0 - v0.1.4 (2021-09-10/13)
+## v0.1.0 - v0.1.5 (2021-09-10/13)
 
 * Initial release allowing you to retrieve addresses from all around the world
