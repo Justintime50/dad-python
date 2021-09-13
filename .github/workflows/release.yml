@@ -16,7 +16,9 @@ jobs:
         with:
           python-version: 3.9
       - name: Initialize DAD submodule
-        run: git submodule init && git submodule update
+        run: |
+          cd dad_tool
+          git submodule init && git submodule update
       - name: Install pypa/build
         run: >-
           python -m
