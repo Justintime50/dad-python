@@ -12,7 +12,7 @@ DEV_REQUIREMENTS = [
 
 setuptools.setup(
     name='dad-tool',
-    version='0.1.7',
+    version='0.2.0',
     description='Dummy Address Data (DAD) - Real addresses from all around the world.',
     long_description=long_description,
     long_description_content_type='text/markdown',

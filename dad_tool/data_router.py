@@ -1,6 +1,7 @@
 import json
-import os
 import random
+
+import pkg_resources
 
 
 def list_addresses(data):
@@ -21,10 +22,9 @@ def list_iso_country_codes():
 
 
 def _open_json_file(data):
-    # Setup the path properly so that `DAD` can be referenced from a package context
-    address_file = os.path.join(os.getcwd(), 'dad_tool', _variables(data))
-    with open(address_file, 'r') as json_file:
-        address_json = json.load(json_file)
+    # Read the file via pkg_resources so that `DAD` can be referenced from a package context
+    address_file = pkg_resources.resource_stream('dad_tool', _variables(data))
+    address_json = json.load(address_file)
 
     return address_json
 
