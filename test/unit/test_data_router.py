@@ -1,5 +1,6 @@
-import dad_tool
 import pytest
+
+import dad_tool
 
 
 def test_random_address():

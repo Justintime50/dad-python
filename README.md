@@ -23,9 +23,6 @@ pip3 install dad_tool
 
 # Install locally
 make install
-
-# Get Makefile help
-make help
 ```
 
 ## Address Data
@@ -131,14 +128,8 @@ A sample address object will look like the following:
 ## Development
 
 ```bash
-# Lint the project
-make lint
-
-# Run tests
-make test
-
-# Run test coverage
-make coverage
+# Get a comprehensive list of development tools
+make help
 ```
 
 ## Attribution
