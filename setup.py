@@ -42,5 +42,5 @@ setuptools.setup(
             'dad/src/other/*.json',
         ],
     },
-    python_requires='>=3.7',
+    python_requires='>=3.7, <4',
 )

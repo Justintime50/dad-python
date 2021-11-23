@@ -128,6 +128,9 @@ A sample address object will look like the following:
 ## Development
 
 ```bash
+# To setup the `DAD` git submodule
+git submodule init && git submodule update
+
 # Get a comprehensive list of development tools
 make help
 ```

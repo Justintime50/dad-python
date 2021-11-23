@@ -1,17 +1,18 @@
 import json
 import random
+from typing import Dict, List
 
 import pkg_resources
 
 
-def list_addresses(data):
-    address_json = _open_json_file(data)
+def list_addresses(address_tag: str) -> List[Dict]:
+    address_json = _open_json_file(address_tag)
 
     return address_json
 
 
-def random_address(data):
-    address_json = _open_json_file(data)
+def random_address(address_tag: str) -> Dict:
+    address_json = _open_json_file(address_tag)
     random_address = random.choice(address_json)
 
     return random_address
@@ -21,15 +22,15 @@ def list_iso_country_codes():
     raise NotImplementedError()
 
 
-def _open_json_file(data):
+def _open_json_file(address_tag: str) -> Dict:
     # Read the file via pkg_resources so that `DAD` can be referenced from a package context
-    address_file = pkg_resources.resource_stream('dad_tool', _variables(data))
+    address_file = pkg_resources.resource_stream('dad_tool', _variables(address_tag))
     address_json = json.load(address_file)
 
     return address_json
 
 
-def _variables(data):
+def _variables(address_tag: str) -> str:
     # DAD variables
     address_directory = 'dad/src/addresses'
     file_extension = '-addresses.min.json'
@@ -69,7 +70,7 @@ def _variables(data):
             'US_WA': f'{address_directory}/{united_states_directory}/wa{file_extension}',
         }
 
-        data_file_path = data_file_paths[data.upper()]
+        data_file_path = data_file_paths[address_tag.upper()]
     except KeyError:
         raise
 
