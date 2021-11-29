@@ -30,16 +30,10 @@ setuptools.setup(
     extras_require={
         'dev': DEV_REQUIREMENTS,
     },
-    # TODO: Is there a way we can specify the single `src` dir instead of each individually?
     package_data={
         'dad_tool': [
-            'dad/src/addresses/australia/*.json',
-            'dad/src/addresses/canada/*.json',
-            'dad/src/addresses/china/*.json',
-            'dad/src/addresses/europe/*.json',
-            'dad/src/addresses/mexico/*.json',
-            'dad/src/addresses/united-states/*.json',
-            'dad/src/other/*.json',
+            'dad/src/addresses/**/*.json',
+            'dad/src/other/**/*.json',
         ],
     },
     python_requires='>=3.7, <4',
