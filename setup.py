@@ -8,13 +8,15 @@ DEV_REQUIREMENTS = [
     'coveralls == 3.*',
     'flake8',
     'isort',
+    'mypy',
     'pytest == 6.*',
     'pytest-cov == 2.*',
+    'types-setuptools',
 ]
 
 setuptools.setup(
     name='dad-tool',
-    version='0.2.0',
+    version='0.2.1',
     description='Dummy Address Data (DAD) - Real addresses from all around the world.',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -34,6 +36,7 @@ setuptools.setup(
         'dad_tool': [
             'dad/src/addresses/**/*.json',
             'dad/src/other/**/*.json',
+            'py.typed',
         ],
     },
     python_requires='>=3.7, <4',

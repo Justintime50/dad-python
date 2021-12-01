@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.2.1 (2021-11-30)
+
+* Adds `mypy` to run type checking and publishes types with new `py.typed` file
+
 ## v0.2.0 (2021-09-23)
 
 * Properly reference DAD files in a package context using `pkg_resources`

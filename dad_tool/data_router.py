@@ -5,13 +5,13 @@ from typing import Dict, List
 import pkg_resources
 
 
-def list_addresses(address_tag: str) -> List[Dict]:
+def list_addresses(address_tag: str) -> List[Dict[str, str]]:
     address_json = _open_json_file(address_tag)
 
     return address_json
 
 
-def random_address(address_tag: str) -> Dict:
+def random_address(address_tag: str) -> Dict[str, str]:
     address_json = _open_json_file(address_tag)
     random_address = random.choice(address_json)
 
@@ -22,7 +22,7 @@ def list_iso_country_codes():
     raise NotImplementedError()
 
 
-def _open_json_file(address_tag: str) -> Dict:
+def _open_json_file(address_tag: str) -> List[Dict[str, str]]:
     # Read the file via pkg_resources so that `DAD` can be referenced from a package context
     address_file = pkg_resources.resource_stream('dad_tool', _variables(address_tag))
     address_json = json.load(address_file)
