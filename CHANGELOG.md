@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v0.3.0 (2022-02-05)
+
+* Adds French addresses
+* Bumps dev dependencies
+
 ## v0.2.1 & v0.2.2 (2021-11-30)
 
 * Adds `mypy` to run type checking and publishes types with new `py.typed` file

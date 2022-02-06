@@ -9,14 +9,14 @@ DEV_REQUIREMENTS = [
     'flake8',
     'isort',
     'mypy',
-    'pytest == 6.*',
-    'pytest-cov == 2.*',
+    'pytest == 7.*',
+    'pytest-cov == 3.*',
     'types-setuptools',
 ]
 
 setuptools.setup(
     name='dad-tool',
-    version='0.2.2',
+    version='0.3.0',
     description='Dummy Address Data (DAD) - Real addresses from all around the world.',
     long_description=long_description,
     long_description_content_type='text/markdown',
