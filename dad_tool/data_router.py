@@ -54,6 +54,7 @@ def _variables(address_tag: str) -> str:
             # Europe
             'EU_DE': f'{address_directory}/{europe_directory}/de{file_extension}',
             'EU_ES': f'{address_directory}/{europe_directory}/es{file_extension}',
+            'EU_FR': f'{address_directory}/{europe_directory}/fr{file_extension}',
             'EU_UK': f'{address_directory}/{europe_directory}/uk{file_extension}',
             # Mexico
             'MX_MX': f'{address_directory}/{mexico_directory}/mx{file_extension}',

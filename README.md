@@ -58,6 +58,7 @@ The following files can be found in the `data` directory.
 | ----------------------------- | ----- |
 | Germany - Wesel Area          | EU_DE |
 | Spain - Countrywide           | EU_ES |
+| France - Paris Area           | EU_FR |
 | United Kingdom - England Area | EU_UK |
 
 ## Mexico
