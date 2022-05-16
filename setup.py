@@ -25,7 +25,19 @@ setuptools.setup(
     url='http://github.com/Justintime50/dad-python',
     author='Justintime50',
     license='MIT',
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(
+        exclude=[
+            'examples',
+            'test',
+        ]
+    ),
+    package_data={
+        'dad_tool': [
+            'dad/src/addresses/**/*.json',
+            'dad/src/other/**/*.json',
+            'py.typed',
+        ],
+    },
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
@@ -33,13 +45,6 @@ setuptools.setup(
     ],
     extras_require={
         'dev': DEV_REQUIREMENTS,
-    },
-    package_data={
-        'dad_tool': [
-            'dad/src/addresses/**/*.json',
-            'dad/src/other/**/*.json',
-            'py.typed',
-        ],
     },
     python_requires='>=3.7, <4',
 )
