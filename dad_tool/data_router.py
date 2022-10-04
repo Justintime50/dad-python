@@ -1,6 +1,9 @@
 import json
 import random
-from typing import Dict, List
+from typing import (
+    Dict,
+    List,
+)
 
 import pkg_resources
 
@@ -13,7 +16,7 @@ def list_addresses(address_tag: str) -> List[Dict[str, str]]:
 
 def random_address(address_tag: str) -> Dict[str, str]:
     address_json = _open_json_file(address_tag)
-    random_address = random.choice(address_json)
+    random_address = random.choice(address_json)  # nosec - not using random for security
 
     return random_address
 
