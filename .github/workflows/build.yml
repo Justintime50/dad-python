@@ -35,7 +35,7 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.pythonversion }}
-      - run: just install coverage
+      - run: just install setup-dad coverage
   coverage:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -45,7 +45,7 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - run: just install coverage
+      - run: just install setup-dad coverage
       - uses: coverallsapp/github-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

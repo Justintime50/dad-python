@@ -56,6 +56,10 @@ isort-check:
 mypy:
     {{VIRTUAL_BIN}}/mypy {{PROJECT_NAME}}/ {{TEST_DIR}}/
 
+# Sets up the DAD git submodule
+setup-dad:
+    git submodule init && git submodule update --remote
+
 # Test the project
 test:
     {{VIRTUAL_BIN}}/pytest

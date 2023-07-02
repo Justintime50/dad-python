@@ -129,7 +129,7 @@ A sample address object will look like the following:
 
 ```bash
 # To setup the `DAD` git submodule
-git submodule init && git submodule update --remote
+just setup-dad
 
 # Get a comprehensive list of development tools
 just --list
