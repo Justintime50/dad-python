@@ -22,7 +22,7 @@ The DAD Python library is the perfect companion to quickly bootstrap address dat
 pip3 install dad_tool
 
 # Install locally
-make install
+just install
 ```
 
 ## Address Data
@@ -82,7 +82,6 @@ The following files can be found in the `data` directory.
 | Utah - Provo Area         | US_UT |
 | Washington - Spokane Area | US_WA |
 
-
 ## Usage
 
 ```python
@@ -133,7 +132,7 @@ A sample address object will look like the following:
 git submodule init && git submodule update --remote
 
 # Get a comprehensive list of development tools
-make help
+just --list
 ```
 
 ## Attribution
