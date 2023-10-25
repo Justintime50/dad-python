@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.1.0 (2023-10-25)
+
+- Adds support for Python 3.12
+- Bumps `dad` submodule
+
 ## v1.0.0 (2023-07-01)
 
 - Drops support for Python 3.7
