@@ -1,6 +1,12 @@
 # CHANGELOG
 
+## v1.1.1 (2023-12-04)
+
+- Fixes releasing process to include the `dad` submodule
+
 ## v1.1.0 (2023-10-25)
+
+**Build is broken, please use `v1.1.1` instead**
 
 - Adds support for Python 3.12
 - Bumps `dad` submodule

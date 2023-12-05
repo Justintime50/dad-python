@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Build package
-        run: just install build
+        run: just install setup-dad build
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
