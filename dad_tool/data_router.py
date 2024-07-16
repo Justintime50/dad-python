@@ -1,11 +1,10 @@
 import json
 import random
+from importlib import resources
 from typing import (
     Dict,
     List,
 )
-
-import pkg_resources
 
 
 def list_addresses(address_tag: str) -> List[Dict[str, str]]:
@@ -26,9 +25,14 @@ def list_iso_country_codes():
 
 
 def _open_json_file(address_tag: str) -> List[Dict[str, str]]:
-    # Read the file via pkg_resources so that `DAD` can be referenced from a package context
-    address_file = pkg_resources.resource_stream('dad_tool', _variables(address_tag))
-    address_json = json.load(address_file)
+    """We use resources.files when opening the file to ensure that the `dad` submodule can be
+    referenced from a package context.
+    """
+    package_name = 'dad_tool'
+    resource_path = _variables(address_tag)
+
+    with resources.files(package_name).joinpath(resource_path).open('r') as address_file:
+        address_json = json.load(address_file)
 
     return address_json
 

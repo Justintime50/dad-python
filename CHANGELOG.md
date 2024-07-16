@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v2.0.0 (2024-07-16)
+
+- Replaces `pkg_resources` with `importlib.resources` to properly load the included `dad` submodule
+- Bumps `dad` submodule
+
 ## v1.1.1 (2023-12-04)
 
 - Fixes releasing process to include the `dad` submodule
