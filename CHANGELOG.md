@@ -3,6 +3,7 @@
 ## v2.0.0 (2024-07-16)
 
 - Replaces `pkg_resources` with `importlib.resources` to properly load the included `dad` submodule
+  - Drops support for Python 3.8 due to functionality not introduced till 3.9
 - Bumps `dad` submodule
 
 ## v1.1.1 (2023-12-04)
