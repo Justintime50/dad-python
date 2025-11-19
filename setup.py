@@ -15,15 +15,15 @@ with open('dad_tool/_version.py', 'r') as version_file:
         raise RuntimeError('Unable to find version string!')
 
 DEV_REQUIREMENTS = [
-    'bandit == 1.7.*',
-    'black == 24.*',
-    'build == 1.2.*',
+    'bandit == 1.9.*',
+    'black == 25.*',
+    'build == 1.3.*',
     'flake8 == 7.*',
-    'isort == 5.*',
-    'mypy == 1.12.*',
-    'pytest == 8.*',
-    'pytest-cov == 5.*',
-    'setuptools >= 68',
+    'isort == 7.*',
+    'mypy == 1.18.*',
+    'pytest == 9.*',
+    'pytest-cov == 7.*',
+    'setuptools >= 80',
 ]
 
 setuptools.setup(
@@ -56,5 +56,5 @@ setuptools.setup(
     extras_require={
         'dev': DEV_REQUIREMENTS,
     },
-    python_requires='>=3.9, <4',
+    python_requires='>=3.10, <4',
 )

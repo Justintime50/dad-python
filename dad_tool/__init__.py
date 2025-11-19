@@ -7,7 +7,7 @@ from dad_tool.data_router import (
 
 
 __all__ = [
-    'list_addresses',
-    'list_iso_country_codes',
-    'random_address',
+    "list_addresses",
+    "list_iso_country_codes",
+    "random_address",
 ]

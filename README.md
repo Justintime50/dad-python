@@ -5,7 +5,7 @@
 Dummy Address Data (DAD) - Retrieve real addresses from all around the world. (Python Client Library)
 
 [![Build Status](https://github.com/Justintime50/dad-python/workflows/build/badge.svg)](https://github.com/Justintime50/dad-python/actions)
-[![Coverage Status](https://coveralls.io/repos/github/Justintime50/dad-python/badge.svg?branch=main)](https://coveralls.io/github/Justintime50/dad-python?branch=main)
+[![Coverage Status](https://img.shields.io/codecov/c/github/justintime50/dad-python)](https://app.codecov.io/github/Justintime50/dad-python)
 [![PyPi](https://img.shields.io/pypi/v/dad_tool)](https://pypi.org/project/dad_tool)
 [![Licence](https://img.shields.io/github/license/Justintime50/dad-python)](LICENSE)
 

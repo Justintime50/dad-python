@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v3.0.0 (2025-11-18)
+
+- Drops support for Python 3.9
+- Bumps dependencies
+
 ## v2.0.0 (2024-07-16)
 
 - Replaces `pkg_resources` with `importlib.resources` to properly load the included `dad` submodule

@@ -4,23 +4,23 @@ import dad_tool
 
 
 def test_random_address():
-    address = dad_tool.random_address('US_UT')
+    address = dad_tool.random_address("US_UT")
 
-    assert address['state'] == 'UT'
+    assert address["state"] == "UT"
 
 
 def test_list_addresses():
-    addresses = dad_tool.list_addresses('US_UT')
+    addresses = dad_tool.list_addresses("US_UT")
 
     assert len(addresses) == 100
-    assert addresses[0]['state'] == 'UT'
+    assert addresses[0]["state"] == "UT"
 
 
 def test_bad_data():
     with pytest.raises(KeyError) as error:
-        _ = dad_tool.random_address('BAD_DATA')
+        _ = dad_tool.random_address("BAD_DATA")
 
-    assert '\'BAD_DATA\'' == str(error.value)
+    assert "'BAD_DATA'" == str(error.value)
 
 
 def test_list_iso_country_codes():
