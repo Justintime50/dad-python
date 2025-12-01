@@ -1,3 +1,41 @@
+[build-system]
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dad-tool"
+description = "Dummy Address Data (DAD) - Real addresses from all around the world."
+dynamic = ["version"]
+readme = "README.md"
+requires-python = ">=3.10,<4"
+license = { text = "MIT" }
+authors = [{ name = "Justintime50" }]
+urls = { Homepage = "http://github.com/Justintime50/dad-python" }
+optional-dependencies = { dev = [
+    "bandit == 1.9.*",
+    "black == 25.*",
+    "build == 1.3.*",
+    "flake8 == 7.*",
+    "isort == 7.*",
+    "mypy == 1.18.*",
+    "pytest == 9.*",
+    "pytest-cov == 7.*",
+    "setuptools >= 80",
+] }
+
+[tool.setuptools.dynamic]
+version = { attr = "dad_tool._version.__version__" }
+
+[tool.setuptools.packages.find]
+exclude = ["examples", "test"]
+
+[tool.setuptools.package-data]
+"dad_tool" = [
+    "dad/src/addresses/**/*.json",
+    "dad/src/other/**/*.json",
+    "py.typed",
+]
+
 [tool.black]
 line-length = 120
 
